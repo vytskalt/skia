@@ -75,7 +75,7 @@ private:
     bool fHalfLeading;
 };
 
-struct ParagraphStyle {
+struct SK_SPI ParagraphStyle {
     ParagraphStyle();
 
     bool operator==(const ParagraphStyle& rhs) const {

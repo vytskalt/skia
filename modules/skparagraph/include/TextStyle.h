@@ -148,7 +148,7 @@ struct PlaceholderStyle {
     SkScalar fBaselineOffset = 0;
 };
 
-class TextStyle {
+class SK_SPI TextStyle {
 public:
     TextStyle() = default;
     TextStyle(const TextStyle& other) = default;
