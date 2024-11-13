@@ -18,7 +18,7 @@ namespace textlayout {
 
 class TextStyle;
 class Paragraph;
-class FontCollection : public SkRefCnt {
+class SK_SPI FontCollection : public SkRefCnt {
 public:
     FontCollection();
 

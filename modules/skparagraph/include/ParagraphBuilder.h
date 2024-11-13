@@ -16,7 +16,7 @@
 namespace skia {
 namespace textlayout {
 
-class ParagraphBuilder {
+class SK_SPI ParagraphBuilder {
 protected:
     ParagraphBuilder() {}
 
