@@ -272,6 +272,9 @@ public:
     void setWordSpacing(SkScalar wordSpacing) { fWordSpacing = wordSpacing; }
     SkScalar getWordSpacing() const { return fWordSpacing; }
 
+    void setPosOffset(SkPoint posOffset) { fPosOffset = posOffset; }
+    SkPoint getPosOffset() const { return fPosOffset; }
+
     SkTypeface* getTypeface() const { return fTypeface.get(); }
     sk_sp<SkTypeface> refTypeface() const { return fTypeface; }
     void setTypeface(sk_sp<SkTypeface> typeface) { fTypeface = std::move(typeface); }
@@ -314,6 +317,7 @@ private:
     SkString fLocale = {};
     SkScalar fLetterSpacing = 0.0;
     SkScalar fWordSpacing = 0.0;
+    SkPoint fPosOffset = {};
 
     TextBaseline fTextBaseline = TextBaseline::kAlphabetic;
 
