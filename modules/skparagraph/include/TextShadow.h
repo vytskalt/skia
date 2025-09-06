@@ -4,19 +4,19 @@
 
 #include "include/core/SkColor.h"
 #include "include/core/SkPoint.h"
+#include "include/core/SkPaint.h"
 
 namespace skia {
 namespace textlayout {
 
 class TextShadow {
 public:
-    SkColor fColor = SK_ColorBLACK;
+    SkPaint fPaint;
     SkPoint fOffset;
-    double fBlurSigma = 0.0;
 
     TextShadow();
 
-    TextShadow(SkColor color, SkPoint offset, double blurSigma);
+    TextShadow(SkPaint paint, SkPoint offset);
 
     bool operator==(const TextShadow& other) const;
 

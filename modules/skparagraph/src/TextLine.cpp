@@ -428,11 +428,10 @@ void TextLine::paintShadow(ParagraphPainter* painter,
             painter->clipRect(clip);
         }
         auto blob = builder.make();
-        painter->drawTextShadow(blob,
+        painter->drawTextBlob(blob,
             x + this->offset().fX + shadow.fOffset.x() + context.fTextShift,
             y + this->offset().fY + shadow.fOffset.y() + correctedBaseline,
-            shadow.fColor,
-            SkDoubleToScalar(shadow.fBlurSigma));
+            shadow.fPaint);
         if (context.clippingNeeded) {
             painter->restore();
         }

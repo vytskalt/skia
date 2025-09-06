@@ -6,13 +6,12 @@ namespace skia {
 namespace textlayout {
 
 TextShadow::TextShadow() = default;
-TextShadow::TextShadow(SkColor color, SkPoint offset, double blurSigma)
-        : fColor(color), fOffset(offset), fBlurSigma(blurSigma) {}
+TextShadow::TextShadow(SkPaint paint, SkPoint offset)
+        : fPaint(paint), fOffset(offset) {}
 
 bool TextShadow::operator==(const TextShadow& other) const {
-    if (fColor != other.fColor) return false;
+    if (fPaint != other.fPaint) return false;
     if (fOffset != other.fOffset) return false;
-    if (fBlurSigma != other.fBlurSigma) return false;
 
     return true;
 }
@@ -21,9 +20,8 @@ bool TextShadow::operator!=(const TextShadow& other) const { return !(*this == o
 
 bool TextShadow::hasShadow() const {
     if (!fOffset.isZero()) return true;
-    if (fBlurSigma != 0.0) return true;
 
-    return false;
+    return true;
 }
 
 }  // namespace textlayout
