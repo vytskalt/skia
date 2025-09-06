@@ -380,7 +380,7 @@ void TextLine::buildTextBlob(TextRange textRange, const TextStyle& style, const 
     }
 
     record.fOffset = SkPoint::Make(this->offset().fX + context.fTextShift,
-                                   this->offset().fY + correctedBaseline) + style.getPosOffset();
+                                   this->offset().fY + correctedBaseline);
 }
 
 void TextLine::TextBlobRecord::paint(ParagraphPainter* painter, SkScalar x, SkScalar y) {
